@@ -1,0 +1,6 @@
+transformers==4.29.2
+datasets==2.10.1
+tqdm
+urllib3==1.26.6
+accelerate
+pdbpp

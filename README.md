@@ -1,0 +1,11 @@
+- cf [RWKV split CPU & GPU results in high perplexity #23368](https://github.com/huggingface/transformers/issues/23368)
+
+- Full CPU ✔️ : 
+  - `nnls: nlls: tensor([1.9837, 2.3163, 2.3380])`
+  - `Perplexity: 9.14018440246582`
+- Full GPU ✔️ :
+  - `nlls: tensor([1.9834, 2.3164, 2.3379], device='cuda:0', dtype=torch.float16)`
+  - `Perplexity: 9.140625`
+ - Split 🔴 :
+    - `nnls: tensor([24.0938, 23.8594, 24.2812], device='cuda:0', dtype=torch.float16)`
+    - `Perplexity: 28641570816.0`
